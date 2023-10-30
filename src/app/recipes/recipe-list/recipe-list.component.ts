@@ -12,7 +12,7 @@ export class RecipeListComponent implements OnInit {
   /* arreglo del tipo Modelo Recipe donde se encuentran los elementos de la receta */
   recipes: Recipe[] = 
   [
-    new Recipe('Recipe title test',
+    new Recipe('Paella valenciana',
       'Recipe description',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/01_Paella_Valenciana_original.jpg/800px-01_Paella_Valenciana_original.jpg'),
       
