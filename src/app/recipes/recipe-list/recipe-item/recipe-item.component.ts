@@ -9,22 +9,22 @@ import { Recipe } from '../../recipe.model';
 
 export class RecipeItemComponent 
 {
-	/* @Input decorador para poder obtener el valor desde afuera */
-  @Input()
-  recipe!: Recipe;/* No se le asigna valor pues se obtiene desde el parentcomponent, con ! se evita
-  que se marque como error si no tiene un valor definido */
+	/* @Input decorador para poder obtener el valor desde afuera, corrige el error en el html */
+  @Input()  recipe!: Recipe;
+ /* No se le asigna valor pues se obtiene desde el parentcomponent, 
+ con ! se evita   que se marque como error si no tiene un valor definido */
 	
-  /* El emisor tendra void pues no pasa información
-  con @Output para escucharlo desde afuera, desde el parentcomponent*/
+  
+  /*con @Output para escucharlo desde afuera, desde el parentcomponent*/
   @Output() recipeSelected = new EventEmitter<void>();
- 
+ /* El emisor tendra void pues no pasa información*/
   constructor() { }
                    
   ngOnInit() {}
                    
   onSelected() 
   {
-    this.recipeSelected.emit(); /* Se emite el evento */
+    this.recipeSelected.emit(); /* Se emite el evento de lo seleccionado en recipeslist*/
   }
 
 }

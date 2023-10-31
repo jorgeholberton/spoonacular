@@ -8,12 +8,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 export class HeaderComponent 
 {
-  /* emiter para indicar el componenre seleccionado */
+  /* emiter para indicar el componente seleccionado 
+  Output decorator para que pueda ser escuchado desde fuera (desde el parent component).*/
   @Output() navbarItemSelected = new EventEmitter<string>();
  
+  /* recibe un string del menu de navegación recipes o shopping-list en navBarItem*/
   onSelect(navBarItem: string) 
   {
-    this.navbarItemSelected.emit(navBarItem);
+    this.navbarItemSelected.emit(navBarItem);/* emitimos el parámetro navbarItem.  */
   }
 }
 
