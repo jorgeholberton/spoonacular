@@ -1,18 +1,18 @@
-<div class="list-group" >
-    <a href="#" class="list-group-item list-group-item-action d-flex">
-        <div>
-            <h4 class="list-group-item-heading"> {{recipe.name}} </h4>  <!-- cambia dinámicamente -->
-            <p class="list-group-item-text"> {{recipe.description}} </p> <!-- cambia dinámicamente -->
-        </div>
-        <span class="ml-auto my-auto">
-            <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-responsive" style="max-height: 50px;">  <!-- cambia dinámicamente -->
-        </span>
-    </a>
-</div> 
+<a href="#" class="list-group-item list-group-item-action d-flex" (click)="onSelected()">
+    <div>
+      <h4 class="list-group-item-heading">{{recipe.name}} </h4>  <!-- cambia dinámicamente -->
+      <p class="list-group-item-text">{{recipe.description}} </p>  <!-- cambia dinámicamente -->
+    </div>
+    <span class="ml-auto my-auto">
+      <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-responsive"
+            style="max-height: 50px;">
+    </span>
+  </a>
+
 
 <!-- para el atributo src podríamos haber usado tanto string interpolation como property binding. 
  Es decir:
 [src]="recipe.imagePath"
 o
 src="{{recipe.imagePath}}" -->
-          
+         
